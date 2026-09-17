@@ -50,7 +50,18 @@ int main()
 
             if (choice == pcChoice)
             {
-                std::cout << "Tie! ";
+                if (choice == 'r')
+                {
+                    std::cout << "Our rocks clash. It's a tie!";
+                }
+                else if (choice == 'p')
+                {
+                    std::cout << "Our papers fly. It's a tie!";
+                }
+                else
+                {
+                    std::cout << "Our scissors clash. It's a tie!";
+                }
             }
             else if (choice == 'r' && pcChoice == 's')
             {
