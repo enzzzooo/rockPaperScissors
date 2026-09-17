@@ -141,7 +141,7 @@ int main()
         // 3 If the computer wins by two or more game difference, for example 3 games to 1, it displays the message "I won! The global score is 3-1. You are a weak opponent!".
         else
         {
-            std::cout << "I won! The global score is " << globalScorePc << "-" << globalScore << ". You are a weak opponent!";
+            std::cout << "I won! The global score is " << globalScorePc << "-" << globalScore << ". You are a weak opponent!\n";
         }
     }
     else
