@@ -93,7 +93,10 @@ int main()
                 pcScore++;
                 std::cout << "My rocks smashes your scissors. I win! ";
             }
-            if (score > pcScore)
+            if (score == pcScore){
+                std::cout << "The score is " << score << "-" << pcScore << ".\n";
+            }
+            else if (score > pcScore)
             {
                 std::cout << "The score is " << score << "-" << pcScore << " in your favor.\n";
             }
@@ -126,7 +129,7 @@ int main()
     // 1 If the global score is a tie, it displays the message "It was a tight match. You are a worthy opponent!".
     if (globalScore == globalScorePc)
     {
-        std::cout << "It was a tight match. You are a worthy opponent";
+        std::cout << "It was a tight match. You are a worthy opponent\n";
     }
     else if (globalScore < globalScorePc)
     {
@@ -146,7 +149,7 @@ int main()
         // 4 If the computer looses by one game difference, for example 1 game to 2, it displays the message "You won! The global score is 1-2".
         if (globalScore - globalScorePc == 1)
         {
-            std::cout << "You won! The global score is " << globalScore << "-" << globalScorePc;
+            std::cout << "You won! The global score is " << globalScore << "-" << globalScorePc << "\n";
         }
         // 5. If the computer looses by two or more game difference, for example 1 game to 3, it displays the message "You won! The global score is 1-3. Congrats, you are a tough player!".
         else
