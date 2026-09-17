@@ -10,20 +10,22 @@
 int main()
 {
     // 1. The human plays first by entering 'R' or 'r' for rock, 'P', or 'p' for paper, and 'S', or 's' for scissors.
-    char choice;
-
+    char choice, pcChoice;
+    int score, pcScore;
     // 2. The computer randomly selects one of the following moves: rock, paper, or scissors.
-    int random = std::rand() % 3;
-    char pcChoice;
+    int random;
     // 3. The program displays the moves made by both players, along with the score after each round. For example, if the human's move is rock and the computer's move is scissors, it displays "Your rock smashes my scissors. You win! ".
-    int score = 0;
-    int pcScore = 0;
     // 4. The player who wins 3 rounds wins a game.
     bool game = true;
     do
     {
+        score = 0;
+        pcScore = 0;
+        random = std::rand() % 3;
+
         while (pcScore < 3 && score < 3)
         {
+            pcChoice = ' ';
             random = std::rand() % 3;
             std::cout << "Enter your choice (r, p, or s): ";
             std::cin >> choice;
